@@ -1,0 +1,37 @@
+<div class="container">
+    <div style="line-height: 5rem;" class="row">
+        <div class="col-12">
+            <button class="back-btn" mat-button (click)="navigateBack()">
+                <mat-icon>keyboard_arrow_left</mat-icon>
+                Back
+            </button>
+        </div>
+    </div>
+    <div class="row">
+        <div *ngIf="loader;else loadContent" class="col spinner-box">
+            <app-spinner></app-spinner>
+        </div>
+        <ng-template #loadContent>
+            <div class="col">
+                <div class="list-group">
+                    <a *ngFor="let item of data" (click)="viewScribe(item)"
+                        class="list-group-item list-group-item-action flex-column align-items-start list-card mg-3">
+                        <div class="row">
+                            <div class="col-2 align-center">
+                                <mat-icon class="icon3 align-center">mic</mat-icon>
+                            </div>
+                            <div style="color: white;" class="col-10">
+                                <div class="d-flex justify-content-between">
+                                    <h6 class="mb-1">Scribe Audio</h6>
+                                    <small>{{item.createdAt | date: 'dd-MM-YYYY | HH:MM:SS'}}</small>
+                                </div>
+                                <p class="mb-1">{{item.jobName}}
+                                </p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </ng-template>
+    </div>
+</div>

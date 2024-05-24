@@ -1,0 +1,66 @@
+<div *ngIf="loader" class="spinner-overlay">
+    <app-spinner></app-spinner>
+</div>
+<div style="line-height: 5rem;" class="container">
+    <div class="row">
+        <div class="col-12">
+            <button class="back-btn" mat-button (click)="navigateBack()">
+                <mat-icon>keyboard_arrow_left</mat-icon>
+                Back
+            </button>
+        </div>
+    </div>
+    <div class="form-group">
+        <div class="input-container">
+            <input type="text" id="newpassword" name="newpassword" placeholder="Enter Patient name">
+            <img src="../../../assets/user.png" alt="Image" class="input-image">
+        </div>
+        <div class="form-group-select">
+            <select>
+                <option>SOAP Template</option>
+                <option>PEARLS Template</option>
+                <option>SOAR Template</option>
+            </select>
+        </div>
+    </div>      
+    <div class="speech-container">
+        <div [ngStyle]="{'align-items': speechText ? 'start' : 'center', 'justify-content': speechText ? '' : 'center'}"
+            class="speech-box">
+            {{speechText ? speechText : 'Start Speaking....' | titlecase}}
+        </div>
+    </div>
+    <div class="bottom">
+        <div class="player">
+            <div>
+                <button *ngIf="recordingInProgress || teste" (click)="clearRecordedData()" mat-fab class="clear-btn">
+                    <mat-icon>delete</mat-icon>
+                </button>
+            </div>
+            <div>
+                <button *ngIf="!isRecording && !blobUrl; else pauseResume" (click)="startRecording()" mat-fab
+                    class="record-btn">
+                    <mat-icon>mic</mat-icon>
+                </button>
+                <ng-template #pauseResume>
+                    <button *ngIf="!isRecordingPaused" (click)="pause()" mat-fab class="record-btn">
+                        <mat-icon>pause</mat-icon>
+                    </button>
+                    <button *ngIf="isRecordingPaused" (click)="resume()" mat-fab class="record-btn">
+                        <mat-icon>play_arrow</mat-icon>
+                    </button>
+                </ng-template>
+            </div>
+            <div>
+                <button *ngIf="recordingInProgress || teste" mat-fab class="save-btn" (click)="uploadAudio()">
+                    <mat-icon>done</mat-icon>
+                </button>
+            </div>
+        </div>
+        <!-- <div *ngIf="isRecording && !blobUrl"> {{recordedTime}} </div>
+        <div>
+            <audio *ngIf="!isRecording && blobUrl" controls>
+                <source [src]="blobUrl" type="audio/webm">
+            </audio>
+        </div> -->
+    </div>
+</div>

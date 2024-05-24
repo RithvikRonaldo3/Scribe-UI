@@ -1,0 +1,98 @@
+.onboarding {
+    text-align: center;
+    margin-top: 20px;
+  }
+  
+  .image-container {
+    position: relative;
+    display: inline-block; /* Adjust this as necessary */
+  }
+  
+  .onboarding-image {
+    width: 100%;
+    max-width: 1200px;
+    height: auto;
+    padding-top: 60px;
+  }
+  
+  .overlay-image {
+    position: absolute;
+    top: 86%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 180px;
+    height: auto; /* Adjust as needed */
+  }
+  
+  .button-group {
+    display: flex;
+    flex-direction: column; /* Stack buttons vertically */
+    align-items: center; /* Center buttons horizontally */
+    gap: 50px;
+  }
+  
+  .login-button {
+    padding: 20px 20px;
+    font-size: 16px;
+    background-color: #0085FF; /* Updated color */
+    color: white;
+    border: none;
+    cursor: pointer;
+    width: 100%; /* Makes the button take the full width of its container */
+    max-width: 430px; /* Optional: limits the maximum width */
+    transition: background-color 0.3s; /* Smooth transition for hover effect */
+    margin-bottom: 12px;
+    border-radius: 5px;
+  }
+  
+  .login-button:hover {
+    background-color: #0073e6; /* Slightly darker shade for hover */
+  }
+  
+  .login-button:active {
+    background-color: #005bb5; /* Even darker shade for active state */
+  }
+  
+  .register-button {
+    padding: 20px 20px;
+    font-size: 16px;
+    background-color: white;
+    color: #0085FF;
+    border: 1px solid #0085FF;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+    max-width: 430px; 
+    transition: background-color 0.3s; /* Smooth transition for hover effect */
+  }
+  
+  .register-button:hover {
+    background-color: #f0f0f0; /* Slightly darker shade for hover */
+  }
+  
+  .register-button:active {
+    background-color: #dcdcdc; /* Even darker shade for active state */
+  }
+  
+  .button-group {
+    display: flex;
+    flex-direction: column; /* Stack buttons vertically */
+    align-items: center; /* Center buttons horizontally */
+    gap: 10px;
+    width: 100%; /* Ensure button group takes full width */
+  }
+
+  .continue-guest-button {
+    background-color: transparent; /* No background color */
+    color: #0085FF; /* Blue text color */
+    border: none; /* No border */
+    cursor: pointer;
+    font-size: 18px;
+    text-decoration: underline; /* Underline text */
+    margin-top: 20px; /* Adjust as needed */
+  }
+  
+
+  
+  
+  

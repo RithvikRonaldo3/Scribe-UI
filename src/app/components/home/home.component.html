@@ -1,0 +1,78 @@
+<div class="home-container">
+    <div class="heading-container">
+        <img src="assets/Logo-Thrive.png" alt="Logo" class="logo">
+        <button class="icon-button">
+            <img src="assets/bell.png" alt="Button Image">
+     </button>
+     <div class="dropdown">
+        <button class="image-button" (click)="toggleDropdown()">
+            <img src="assets/doctor1.jpg" alt="Button Image">
+        </button>
+        <div class="dropdown-content" id="dropdownContent">
+            <button class="logout-button" (click)="logout()">Logout</button>
+        </div>
+    </div>
+    
+    </div>
+    <div class="text-container">
+        <h1>Hello, Dr Farrell ! <span class="emoji">👋</span></h1>
+        <p>How may I help you today ?</p>
+    </div>
+    <div class="cards-container">
+        <div class="card card-blue" (click)="goToRecordNotes()">
+            <div class="row">
+                <h2>Record Patient Conversation</h2>
+            </div>
+            <p>Effortlessly record your conversations with patients to ensure accurate and comprehensive records.</p>
+            <span><mat-icon class="icon1">mic</mat-icon></span>
+            <span><mat-icon class="arrow1">arrow_forward</mat-icon></span>
+        </div>
+        <div class="card card-purple">
+            <div class="row">
+                <h2>Summarize a patient Visit</h2>
+            </div>
+            <p>Detailed summary of the patient's visit will be provided after the appointment.</p>
+            <span><mat-icon class="icon2">record_voice_over</mat-icon></span>
+            <span><mat-icon class="arrow2">arrow_forward</mat-icon></span>
+        </div>
+    </div>
+</div>
+<div class="rounded-container">
+<div class="container">
+    <div class="row">
+        <div class="col">
+            <div class="title-box" style="padding-top: 4%;">
+                <h4>History</h4>
+                <a (click)="goToHistory()" style="cursor: pointer;">See all</a>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div *ngIf="loader;else loadContent" class="col spinner-box">
+            <app-spinner></app-spinner>
+        </div>
+        <ng-template #loadContent>
+            <div class="col">
+                <div class="list-group">
+                    <a *ngFor="let item of data" style="cursor: pointer;" (click)="viewScribe(item)"
+                        class="list-group-item list-group-item-action flex-column align-items-start list-card mg-3">
+                        <div class="row">
+                            <div class="col-2 align-center">
+                                <mat-icon class="icon3 align-center">mic</mat-icon>
+                            </div>
+                            <div style="color: white;" class="col-10">
+                                <div class="d-flex justify-content-between">
+                                    <h6 class="mb-1">Scribe Audio</h6>
+                                    <small>{{item.createdAt | date: 'dd-MM-YYYY | HH:MM:SS'}}</small>
+                                </div>
+                                <p class="mb-1">{{item.jobName}}
+                                </p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </ng-template>
+    </div>
+</div>
+</div>

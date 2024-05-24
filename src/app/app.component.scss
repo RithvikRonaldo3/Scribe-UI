@@ -1,0 +1,9 @@
+/* wrapper.component.scss */
+.app-wrapper {
+    background-color: #000000; /* Change to your desired background color */
+    width: 100%;
+    height: 100%;
+    display: flex; /* Use flexbox to allow child elements to grow */
+    flex-direction: column;
+  }
+  

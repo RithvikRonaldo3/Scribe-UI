@@ -1,0 +1,201 @@
+.container{
+    background-image: url('../../../assets/bg-light.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    min-height: 20vh; /* Use min-height instead of height to ensure full viewport coverage */
+
+
+}
+
+
+.back-btn {
+    color: white;
+    display: flex;
+    align-items: center;
+    background-color: transparent;
+    color: #ffffff; /* Adjust text color as needed */
+    border: none;
+    cursor: pointer;
+    font-size: 17px; /* Adjust text size */
+    padding: 20px 16px; /* Adjust padding as needed */
+}
+
+.back-btn mat-icon {
+    font-size: 30px; /* Adjust icon size */
+    margin-right: 10px;
+    margin-top: -7px; /* Add spacing between icon and text */
+}
+
+.back-btn:hover {
+    color: #3b86cc; /* Adjust text color on hover */
+}
+
+.back-btn:focus {
+    outline: none; /* Remove outline on focus */
+}
+
+.copy-btn {
+    background: #1890FF;
+    color: white;
+    position: fixed; /* Change to fixed positioning */
+    left: -33%; /* Align the button horizontally to the center */
+    transform: translateX(-50%); /* Center the button horizontally */
+    bottom: -40px; /* Adjust the distance from the bottom */
+    z-index: 1; /* Ensure the button stays above other elements */
+    width: 140px; /* Adjust width */
+    height: 40px; /* Adjust height */
+    font-size: 18px; /* Adjust font size */
+    line-height: 40px; /* Adjust line height to vertically center text */
+    border: none; /* Remove border */
+    border-radius: 5px; /* Optional: Add rounded corners */
+    text-align: center; /* Center align text */
+}
+
+.summary-heading {
+    font-family: "Roboto", sans-serif; /* Use Roboto font */
+    font-size: 26px; /* Set the font size */
+    font-weight: 600; /* Set the font weight */
+    color: white; /* Set the text color */
+    padding-top: 20px;
+    padding-left: 10px;
+    /* Add any additional styling as needed */
+}
+
+
+
+
+
+
+
+
+.mat-tab-label {
+    font-family: "Roboto", sans-serif; /* Use Roboto font */
+    font-size: 16px; /* Set the font size */
+    font-weight: 400; /* Set the font weight */
+    background-color: transparent;
+    color: rgb(255, 255, 255); /* Set the text color to white by default */
+    border-bottom: 1px solid gray; /* Add a gray underline to each tab label */
+    transition: color 0.3s, border-bottom 0.3s; /* Smooth transition for color and border-bottom changes */
+    z-index: 1;
+}
+
+.mat-tab-label.mat-tab-label-active {
+    font-weight: 700; /* Make the active tab label bold */
+    border-bottom: 2px solid #3b86cc; /* Add a blue underline to the active tab label */
+    color: #3b86cc; /* Change the color of the active tab label to blue */
+}
+
+
+
+.mat-ink-bar {
+    background-color: #40A9FF; /* Blue color for the ink bar */
+}
+
+.mat-tab-label.mat-tab-label-active {
+    border-bottom: 2px solid #40A9FF; /* Add a blue underline to the active tab label */
+    color: #40A9FF; /* Change the color of the active tab label */
+}
+
+.spinner {
+    stroke: white !important;
+}
+
+.spinner-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 30%;
+}
+
+.bottom {
+    position: fixed;
+    bottom: 10%;
+    width: 100%;
+    text-align: center;
+}
+
+
+.content-box {
+    width: 100%;
+    height: 43rem;
+    overflow-y: auto;
+    scrollbar-width: thin;
+    background-color: #1B1B1B;
+    border-radius: 10px;
+    margin-top: 20px;
+    padding: 1.5rem 1.5rem;
+    font-family: "Roboto", sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+}
+
+.content-box-transcript {
+    width: 100%;
+    height: 43rem;
+    overflow-y: auto;
+    scrollbar-width: thin;
+    background-color: #1B1B1B;
+    border-radius: 10px;
+    margin-top: 20px;
+    padding: 1.5rem 1.5rem;
+    font-family: "Roboto", sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+}
+
+.content-box-summary {
+    width: 100%;
+    height: 26rem;
+    overflow-y: auto;
+    scrollbar-width: thin;
+    background-color: #1B1B1B;
+    border-radius: 10px;
+    margin-top: -10px;
+    padding: 1.5rem 1.5rem;
+    font-family: "Roboto", sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+}
+
+
+
+/* CSS for the .content-box when the Summary tab is active */
+.summary-active {
+    height: 22rem;
+    width: 100%;
+     /* Reduced height when Summary tab is active */
+}
+
+
+
+
+.sticky-header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    width: 29rem;
+    margin-left: -2rem;
+}
+
+.content{
+    line-height: 1.5rem;
+    color: white;
+}
+
+.card {
+    background-color: #1B1B1B;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    height: 180px;
+}
+
+.summary-heading {
+    font-family: "Roboto", sans-serif; /* Use Roboto font */
+    font-size: 26px; /* Set the font size */
+    font-weight: 600; /* Set the font weight */
+    color: white; /* Set the text color */
+    padding-top: 20px;
+    padding-left: 10px;
+}

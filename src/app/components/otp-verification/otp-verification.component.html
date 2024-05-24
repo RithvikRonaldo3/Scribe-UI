@@ -1,0 +1,37 @@
+<div class="password-container">
+    <button class="back-button" (click)="goBack()" ></button>
+    <img src="assets/Logo-Thrive.png" alt="Logo" class="logo">
+    <div class="welcome-text">
+        <h1>Forgot Password?</h1>
+        <p>Don't worry! It occurs. Please enter the email</p>
+        <p>address linked with your account</p>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-3">
+                <input type="text" class="form-control" #txt1 maxlength="1" (keyup)="move($event, '', txt1, txt2)">
+            </div>
+            <div class="col-md-3">
+                <input type="text" class="form-control" #txt2 maxlength="1" (keyup)="move($event, txt1, txt2, txt3)">
+            </div>
+            <div class="col-md-3">
+                <input type="text" class="form-control" #txt3 maxlength="1" (keyup)="move($event, txt2, txt3, txt4)">
+            </div>
+            <div class="col-md-3">
+                <input type="text" class="form-control" #txt4 maxlength="1" (keyup)="move($event, txt3, txt4, '')">
+            </div>
+        </div>
+    </div>
+
+    <button class="login-button" (click)="goToPasswordVerification()">Verify</button>
+
+    <div class="register-container">
+        <span class="register-text">Didn't received code?</span>
+        <button class="register-button">Resend</button>
+    </div>
+
+
+
+    
+</div>

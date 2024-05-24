@@ -1,0 +1,398 @@
+:host {
+    display: block;
+    height: 100vh; /* Make the host element take full viewport height */
+    background-image: url('../../../assets/background.svg');
+    background-size: cover; /* Ensure the image covers the whole element */
+    background-repeat: no-repeat; /* Prevent the image from repeating */
+    background-position: center center; /* Center the image */
+  }
+  
+
+.heading-container {
+    display: flex;
+    align-items: center;
+}
+
+
+.logo {
+    height: 36px; /* Adjust as needed */
+    padding-right: 200px;
+    padding-left: 30px;
+    margin-top: 35px;
+}
+
+.icon-button, .image-button {
+    background-color: black; /* Set background to black */
+    border: 2px solid white; /* Add white border */
+    border-radius: 50%;
+    margin-left: 16px; /* Space between buttons and logo */
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 45px; /* Adjust as needed */
+    height: 45px; /* Adjust as needed */
+    padding: 0; /* Remove default padding */
+    margin-top: 40px;
+}
+
+.icon-button img{
+    width:60%; /* Adjust as needed to fit within the button */
+    height: 60%; /* Adjust as needed to fit within the button */
+    object-fit: cover;
+    border-radius: 50%; /* Ensure the image is circular */
+}
+
+.image-button img {
+    width: 100%; /* Adjust as needed to fit within the button */
+    height: 100%; /* Adjust as needed to fit within the button */
+    object-fit: cover;
+    border-radius: 50%; /* Ensure the image is circular */
+}
+
+.icon-button:hover, .image-button:hover {
+    background-color: #333; /* Darker background on hover */
+    transform: scale(1.1); /* Slightly scale up the button */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add subtle shadow on hover */
+}
+
+
+.image-button h2 {
+    margin: 5px 0;
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    font-size: 16px;
+    color: wheat;
+}
+
+.image-button p {
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    font-size: 14px;
+    color: wheat;
+}
+
+.text-container {
+    font-family: 'Roboto', sans-serif;
+    text-align: left;
+    margin-top: 65px;
+    margin-left: 35px;
+}
+
+.text-container h1 {
+    font-weight: bold;
+    font-size: 35px;
+    margin-bottom: 15px; 
+    color: white;
+    /* Adjust as needed */
+}
+
+.text-container p {
+    font-weight: 300;
+    font-size: 17px;
+    margin: 0;
+    color: white;
+}
+
+text-container {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.text-container h1 {
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+
+.text-container p {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    font-size: 17px;
+    margin: 0;
+}
+
+.emoji {
+    margin-left: 10px; /* Adjust as needed */
+}
+
+.cards-container {
+    display: grid;
+    gap: 20px; /* Space between the cards */
+    margin-top: 20px; /* Space above the cards container */
+    align-items: center;
+    margin-top: 40px;
+}
+
+.card {
+    border-radius: 15px; /* Rounded corners */
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    color: rgb(0, 0, 0); /* Ensure text is visible on colored backgrounds */
+    width: 430px; /* Adjust as needed */
+    height: 150px; 
+    margin-left: 35px;
+}
+
+.card-blue {
+    background-color: #4aa8ff;
+}
+
+.card-purple {
+    background-color: #c09ff8;
+}
+
+.card:hover {
+    transform: translateY(-5px) scale(1.05); /* Lift and scale on hover */
+    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.3); /* More pronounced shadow on hover */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition */
+    cursor: pointer;
+}
+
+
+.card h2, .card p {
+    max-width: 305px; /* Adjust as needed */
+}
+
+.card h2 {
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    font-size: 20px;
+    margin-bottom: 10px; /* Adjust as needed */
+}
+
+.card p {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    font-size: 16px;
+    margin: 0;
+}
+
+.icon1 {
+    position: absolute;
+    top: 22px; /* Adjust top position */
+    left: 90%; /* Adjust left position */
+    transform: translateX(-50%); /* Center the icon horizontally */
+    // background-color: #3b86cc;
+    border-radius: 50%; /* Make the background circular */
+    padding: 10px; /* Adjust padding to center the icon */
+    color: rgb(0, 0, 0); /* Change icon color for better visibility */
+    display: inline-flex; /* Align icon within the background */
+    justify-content: center; /* Center the icon */
+    align-items: center; /* Center the icon */
+    width: 30px; /* Set a fixed width */
+    height: 30px; /* Set a fixed height */
+    font-size: 30px; /* Adjust font size as needed */
+}
+
+.arrow1 {
+    position: absolute;
+    top: 88px; /* Adjust top position */
+    left: 90%; /* Adjust left position */
+    transform: translateX(-50%); /* Center the icon horizontally */
+    background-color: #3b86cc;
+    border-radius: 30%; /* Make the background circular */
+    padding: 10px; /* Adjust padding to center the icon */
+    color: white; /* Change icon color for better visibility */
+    display: inline-flex; /* Align icon within the background */
+    justify-content: center; /* Center the icon */
+    align-items: center; /* Center the icon */
+    width: 40px; /* Set a fixed width */
+    height: 40px; /* Set a fixed height */
+    font-size: 28px; /* Adjust font size as needed */
+}
+
+.icon2 {
+    position: absolute;
+    top: 20px; /* Adjust top position */
+    left: 90%; /* Adjust left position */
+    transform: translateX(-50%); /* Center the icon horizontally */
+    // background-color: #3b86cc;
+    border-radius: 50%; /* Make the background circular */
+    padding: 10px; /* Adjust padding to center the icon */
+    color: rgb(0, 0, 0); /* Change icon color for better visibility */
+    display: inline-flex; /* Align icon within the background */
+    justify-content: center; /* Center the icon */
+    align-items: center; /* Center the icon */
+    width: 30px; /* Set a fixed width */
+    height: 30px; /* Set a fixed height */
+    font-size: 30px; /* Adjust font size as needed */
+}
+
+.arrow2 {
+    position: absolute;
+    top: 85px; /* Adjust top position */
+    left: 90%; /* Adjust left position */
+    transform: translateX(-50%); /* Center the icon horizontally */
+    background-color: #9a7fc6;
+    border-radius: 30%; /* Make the background circular */
+    padding: 10px; /* Adjust padding to center the icon */
+    color: white; /* Change icon color for better visibility */
+    display: inline-flex; /* Align icon within the background */
+    justify-content: center; /* Center the icon */
+    align-items: center; /* Center the icon */
+    width: 40px; /* Set a fixed width */
+    height: 40px; /* Set a fixed height */
+    font-size: 28px; /* Adjust font size as needed */
+}
+
+// .container {
+//     padding: 20px;
+// }
+
+.title-box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.title-box h4 {
+    margin: 0;
+    color: rgb(0, 0, 0);
+    font-family: 'Roboto', sans-serif;
+    font-weight: 800;
+    font-size: 26px;
+}
+
+.title-box a {
+    color: rgb(0, 0, 0);
+    cursor: pointer;
+    text-decoration: underline;
+    font-size: 16px;
+}
+
+.title-box a:hover {
+    text-decoration: underline;
+}
+
+.list-group{
+    margin-top: 30px;
+}
+
+.spinner-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.list-group-item {
+    background-color: #343a40;
+    border: none;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    cursor: pointer;
+    width: 100%;
+    transition: background-color 0.3s ease;
+}
+
+.list-group-item:hover {
+    background-color: #495057;
+}
+
+.icon3 {
+    position: relative; /* Ensure the parent container is positioned relatively */
+    font-size: 24px;
+    color: white;
+    padding-top: 10px;
+}
+
+.icon3::before {
+    content: ''; /* Create a pseudo-element */
+    position: absolute;
+    top: 60%; /* Adjust to bring it a little down */
+    left: 50%;
+    transform: translate(-50%, -50%); /* Center the pseudo-element */
+    width: 40px; /* Set the width of the circular background */
+    height: 40px; /* Set the height of the circular background */
+    border-radius: 50%; /* Make it circular */
+    background-color: #3b86cc; /* Set the background color */
+    z-index: -1; /* Ensure the pseudo-element is behind the icon */
+}
+
+
+
+.align-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.list-card {
+    padding: 10px;
+}
+
+.list-card h6,
+.list-card p,
+.list-card small {
+    margin: 0;
+    color: white;
+}
+
+.list-card small {
+    font-size: 12px;
+}
+
+.rounded-container {
+    border-radius: 20px; /* Adjust the value to change the roundness of corners */
+    background-color: #ffffff; /* Change the background color as desired */
+    padding: 20px; /* Adjust padding as needed */
+    margin: 20px; /* Adjust margin as needed */
+    margin-top: 30px;
+    height: 35%;
+    
+}
+
+/* Dropdown styles */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.image-button {
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 100px;
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    z-index: 1;
+    right: 0; /* Position the dropdown content to the right */
+    margin-top: 15px;
+    margin-left: 20px;
+}
+
+.dropdown-content::before {
+    content: "";
+    position: absolute;
+    top: -10px;
+    right: 20px; /* Position the triangle to the right */
+    border-width: 0 10px 10px 10px;
+    border-style: solid;
+    border-color: transparent transparent #f9f9f9 transparent;
+}
+
+.logout-button {
+    width: 100%;
+    padding: 5px 2px;
+    text-align: center;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.logout-button:hover {
+    background-color: #ddd;
+}

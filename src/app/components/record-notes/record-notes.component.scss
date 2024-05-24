@@ -1,0 +1,292 @@
+:host {
+    display: block;
+    height: 30vh; /* Make the host element take full viewport height */
+    background-image: url('../../../assets/background.svg');
+    background-size: cover; /* Ensure the image covers the whole element */
+    background-repeat: no-repeat; /* Prevent the image from repeating */
+    background-position: center center; /* Center the image */
+  }
+  
+
+
+.speech-container {
+    padding: 1rem;
+    overflow: hidden;
+    position: relative;
+    border-radius: 3%;
+    background: #1b1b1b;
+    margin-top: 20px;
+}
+
+.speech-box {
+    border-radius: 3%;
+    background-color: #1b1b1b;
+    height: 32rem;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    color: white;
+    line-height: 2rem;
+    overflow-y: auto;
+    padding: 2% 4%;
+    box-sizing: content-box;
+}
+
+.back-btn {
+    color: white;
+    display: flex;
+    align-items: center;
+    background-color: transparent;
+    color: #ffffff; /* Adjust text color as needed */
+    border: none;
+    cursor: pointer;
+    font-size: 17px; /* Adjust text size */
+    padding: 20px 16px; /* Adjust padding as needed */
+}
+
+.back-btn mat-icon {
+    font-size: 30px; /* Adjust icon size */
+    margin-right: 10px;
+    margin-top: -7px; /* Add spacing between icon and text */
+}
+
+.back-btn:hover {
+    color: #3b86cc; /* Adjust text color on hover */
+}
+
+.back-btn:focus {
+    outline: none; /* Remove outline on focus */
+}
+
+.pd-5 {
+    padding: 5%;
+}
+
+.player {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.save-btn {
+    background: #52c41a;
+    color: white;
+    position: absolute;
+    margin-left: -1400px;
+}
+
+.record-btn {
+    background: #00b7ff;
+    color: white;
+    margin-left: -690px;
+    position: absolute;
+    animation-duration: 1.5s;
+    animation-name: ripple;
+    animation-iteration-count: infinite;
+}
+
+@keyframes ripple {
+    0% {
+        box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.4), 0 0 0 0 rgba(255, 255, 255, 0.4);
+    }
+    80% {
+        box-shadow: 0 0 0 20px rgba(255, 255, 255, 0.4), 0 0 0 40px rgba(255, 255, 255, 0.4);
+    }
+    100% {
+        box-shadow: 0 0 0 20px rgba(255, 255, 255, 0.1), 0 0 0 40px rgba(255, 255, 255, 0.1);
+    }
+}
+
+.record-btn.ripple-effect {
+    animation: ripple 1s ease-out;
+}
+
+
+.clear-btn {
+    background: #b81315;
+    color: white;
+    margin-left: 20px;
+    position: absolute;
+}
+
+.stop-btn {
+    background: red;
+    color: white;
+    padding-left: 90px;
+    
+
+}
+
+.bottom {
+    position: fixed;
+    bottom: 10%;
+    width: 100%;
+}
+
+.spinner-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.7);
+    z-index: 9999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.form-group {
+    gap: 20px; /* Add margin between form groups */
+    display: flex;
+    flex-direction: column;
+    position: relative;
+
+}
+
+/* Input field styles */
+.form-group {
+    gap: 20px; /* Add margin between form groups */
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    padding-left: 40px;
+}
+
+.input-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.input-container input[type="text"] {
+    width: 400px; /* Set width of input field */
+    height: 60px; /* Set height of input field */
+    padding: 10px; /* Add padding for better appearance */
+    border: 1px solid #ccc; /* Add border for better visibility */
+    border-radius: 5px; /* Add border-radius for rounded corners */
+    font-size: 19px; /* Adjust font size as needed */
+    box-sizing: border-box; /* Include padding and border in width calculation */
+    background-color: #1B1B1B; /* Set background color */
+    padding-left: 60px; /* Set left padding to make space for image */
+    color: #fff; /* Set text color to white */
+}
+
+.input-container .input-image {
+    position: absolute;
+    left: 20px; /* Adjust left position of the image */
+    width: 15px; /* Set width of the image */
+    height: auto; /* Maintain aspect ratio */
+}
+
+
+.form-group input[type="text"]::placeholder,
+.form-group input[type="email"]::placeholder,
+.form-group input[type="password"]::placeholder {
+    color: #8391A1; /* Set placeholder text color to white */
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.input-field {
+    width: 400px; /* Set width of input field */
+    height: 60px; /* Set height of input field */
+    padding: 10px; /* Add padding for better appearance */
+    border: 1px solid #ccc; /* Add border for better visibility */
+    border-radius: 5px; /* Add border-radius for rounded corners */
+    font-size: 16px; /* Adjust font size as needed */
+    box-sizing: border-box; /* Include padding and border in width calculation */
+    background-color: #1B1B1B; /* Set background color */
+    padding-left: 50px; /* Set left padding to make space for image */
+    color: #fff; /* Set text color to white */
+}
+
+.dropdown-toggle {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 40px; /* Set width of the toggle button */
+    height: 100%; /* Set height equal to input field */
+    border: none;
+    background-color: #1B1B1B;
+    color: #fff;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+.dropdown-menu {
+    position: absolute;
+    top: 100%; /* Position below the input field */
+    left: 0;
+    width: calc(100% - 2px); /* Full width of the parent */
+    background-color: #fff; /* Background color of the dropdown menu */
+    border: 1px solid #ccc; /* Border of the dropdown menu */
+    border-top: none; /* Remove top border */
+    border-radius: 0 0 5px 5px; /* Rounded corners only at the bottom */
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2); /* Add shadow */
+    z-index: 1000; /* Ensure it appears above other elements */
+    display: none; /* Hide by default */
+    color: #fff;
+}
+
+.dropdown-menu a {
+    display: block;
+    padding: 10px 20px;
+    color: #ffffff; /* Text color */
+    text-decoration: none;
+}
+
+.dropdown-menu a:hover {
+    background-color: #f5f5f5; /* Background color on hover */
+}
+
+.custom-input-field .mat-form-field-wrapper {
+    border: 1px solid #ccc; /* Add custom border */
+    border-radius: 5px; /* Add border-radius for rounded corners */
+    padding: 10px; /* Add padding */
+}
+
+.custom-input-field .mat-select-value {
+    color: #ffffff; /* Change text color */
+}
+
+.custom-input-field .mat-form-field-underline {
+    display: none; /* Hide the underline */
+}
+
+
+.form-group-select select {
+    /* Adjust appearance */
+    width: 400px; /* Set width of input field */
+    height: 60px; /* Set width of the select box */
+    padding: 10px; /* Add padding */
+    font-size: 16px; /* Set font size */
+    border: 1px solid #ccc; /* Add border */
+    border-radius: 5px; /* Add border-radius for rounded corners */
+    background-color: #f2f2f2; /* Set background color */
+    color: #ffffff; /* Set text color */
+    background-color: #1B1B1B;
+    margin-right:40px;
+  }
+  
+  /* Adjust appearance of options */
+  .form-group-select select option {
+    background-color: #fff; /* Set background color of options */
+    color: #545050; /* Set text color of options */
+  }
+  
+  /* Adjust appearance of select when hovered */
+  .form-group-select select:hover {
+    border-color: #999; /* Change border color on hover */
+  }
+  
+  /* Adjust appearance of select when focused */
+  .form-group-select select:focus {
+    outline: none; /* Remove default focus outline */
+    border-color: #66afe9; /* Change border color on focus */
+    box-shadow: 0 0 5px rgba(102, 175, 233, 0.5); /* Add shadow on focus */
+  }
+  

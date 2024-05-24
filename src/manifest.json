@@ -1,0 +1,31 @@
+{
+  "manifest_version": 3,
+  "name": "Audio Scribe",
+  "description": "Audio Scribe - Application",
+  "version": "1.0.0",
+  "action": {
+    "default_title": "Click to open panel",
+    "default_popup": "popup.html"
+  },
+  "icons": {
+    "128": "assets/logo-12.png"
+  },
+  "content_security_policy": {
+    "extension_pages": "script-src 'self' ; object-src 'self'"
+  },
+  "permissions": [
+    "activeTab",
+    "background",
+    "scripting",
+    "clipboardWrite",
+    "sidePanel",
+    "contextMenus"
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": ["index.html", "styles.scss"],
+      "matches": ["<all_urls>"]
+    }
+  ],
+  "host_permissions": ["<all_urls>"]
+}

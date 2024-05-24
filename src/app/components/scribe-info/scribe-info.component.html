@@ -1,0 +1,61 @@
+<div class="container">
+    <div style="line-height: 5rem;" class="row">
+        <div class="col-12">
+            <button class="back-btn" mat-button (click)="navigateBack()">
+                <mat-icon>keyboard_arrow_left</mat-icon>
+                Back
+            </button>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col">
+            <div *ngIf="loader;else loadContent" class="col spinner-box">
+                <app-spinner></app-spinner>
+            </div>
+        </div>
+        <ng-template #loadContent>
+            <div class="col-12" style="padding: 0% 9%;">
+                <app-processing *ngIf="transcriptState==='IN_PROGRESS';else loadFiles"></app-processing>
+                <ng-template #loadFiles>
+                    <div class="sticky-header">
+                        <mat-tab-group mat-stretch-tabs [selectedIndex]="selectedIndex" (selectedIndexChange)="tabChange($event)" >
+                            <mat-tab label="Full Transcript">
+                                <div class="content-box-transcript">
+                                    <span #contentToCopy class="content">
+                                        {{transcript}}
+                                    </span>
+                                </div>
+                            </mat-tab>
+                            <mat-tab label="Summary">
+                                <h3 class="summary-heading">Summary</h3>
+                                <div class="content-box-summary">
+                                    <span class="content">
+                                        <div *ngFor="let data of summary">
+                                            {{data?.title}}
+                                            <br>
+                                            <ul>
+                                                <li *ngFor="let item of data.points">{{item}}</li>
+                                            </ul>
+                                        </div>
+                                    </span>
+                                </div>
+                                <div>
+                                    <h3 class="summary-heading">Billing Codes</h3>
+                                    <div class="card">
+                                    </div>
+                                </div>
+                            </mat-tab>
+                            
+                        </mat-tab-group>
+                    </div>
+                </ng-template>
+            </div>
+        </ng-template>
+    </div>
+    <div *ngIf="!loader && transcript && summary" class="bottom">
+        <button (click)="copyContent()" class="copy-btn" mat-button>
+            <mat-icon>file_copy</mat-icon>
+            Copy
+        </button>
+    </div>
+</div>

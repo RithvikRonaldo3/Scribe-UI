@@ -1,0 +1,100 @@
+.title-box {
+    display: flex;
+    justify-content: space-between;
+}
+
+.icon3 {
+    background: #4aa8ff;
+    border-radius: 50%;
+    padding: 20px;
+}
+
+.align-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.card-txt {
+    margin: 0px
+}
+
+.list-card {
+    background-color: #171717;
+    color: white!important;
+    border: black;
+}
+
+.back-btn {
+    background: black;
+    color: white!important;
+}
+
+.spinner-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 30%;
+}
+
+.list-group-item:hover {
+    background-color: #2c2c2c; /* Change background color on hover */
+    transform: translateX(10px); /* Move the item 10 pixels to the right on hover */
+}
+
+.list-group-item {
+    transition: background-color 0.3s ease-in-out; /* Add transition for smooth effect */
+    transition: transform 0.3s ease-in-out; /* Add transition for smooth movement effect */
+    height: 80px; /* Change the height as per your requirement */
+    width: 95%;
+    margin-left: 15px;
+
+}
+
+.mg-3 {
+    margin: 2% 0%;
+}
+
+.list-group-item h6{
+    font-size: 16px; /* Adjust font size */
+    font-weight: bold; /* Adjust font weight */
+    padding-top: 12px;
+    /* Add more text styles as needed */
+}
+
+.list-group-item p {
+    font-size: 14px; /* Adjust font size */
+    font-weight: 100; /* Adjust font weight */
+    /* Add more text styles as needed */
+}
+
+.list-group-item small{
+    font-size: 13px;
+    font-weight: 400;
+}
+
+.back-btn {
+    color: white;
+    display: flex;
+    align-items: center;
+    background-color: transparent;
+    color: #ffffff; /* Adjust text color as needed */
+    border: none;
+    cursor: pointer;
+    font-size: 17px; /* Adjust text size */
+    padding: 20px 16px; /* Adjust padding as needed */
+}
+
+.back-btn mat-icon {
+    font-size: 30px; /* Adjust icon size */
+    margin-right: 10px;
+    margin-top: -7px; /* Add spacing between icon and text */
+}
+
+.back-btn:hover {
+    color: #3b86cc; /* Adjust text color on hover */
+}
+
+.back-btn:focus {
+    outline: none; /* Remove outline on focus */
+}

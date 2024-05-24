@@ -1,0 +1,67 @@
+.splash-container {
+  text-align: center;
+  margin: 20px 0;
+  justify-content: center;
+}
+
+  .logo {
+    height: 150px; /* Adjust height as needed */
+    width: 150px; 
+    margin-top: 260px;
+  }
+
+  .welcome-text {
+    text-align: center;
+    margin-top: 100px; /* Adjust top margin to move the text further down */
+    width: 100%;
+    height: auto;
+    font-family: 'Roboto', sans-serif;
+    padding-bottom: 40px;
+
+}
+
+
+.welcome-text h1 {
+    margin: 0;
+    line-height: 1.2;
+    font-weight: 800; /* Make text bold */
+    font-size: 38px; /* Adjust text size as needed */
+    color: white; /* Set text color to white */
+    font-family: 'Roboto', sans-serif; /* Specify Roboto font */
+    margin-bottom: 20px;
+    align-items: center;
+    margin-top: -60px;
+
+}
+
+.welcome-text p {
+    margin: 0;
+    line-height: 1.2;
+    font-weight: 10;
+    font-size: 20px;
+    font-style: normal; /* Adjust text size as needed */
+    color: white; /* Set text color to white */
+    font-family: 'Roboto', sans-serif; /* Specify Roboto font */
+    margin-top: 5px;
+    padding-left: 10px;
+    align-items: center;
+    justify-content: center;
+}
+
+.login-button {
+    padding: 23px 170px;
+    background-color: #007bff; /* Set background color */
+    color: #fff; /* Set text color */
+    border: none; /* Remove default button border */
+    border-radius: 5px; /* Add border-radius for rounded corners */
+    font-size: 16px; /* Adjust font size as needed */
+    cursor: pointer; /* Set cursor to pointer on hover */
+    transition: background-color 0.3s; /* Add transition effect */
+    margin-top: 40px;
+}
+
+.login-button:hover {
+    background-color: #0056b3; /* Darken background color on hover */
+}
+
+

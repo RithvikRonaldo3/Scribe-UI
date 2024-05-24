@@ -1,0 +1,25 @@
+@use '~@angular/material' as mat;
+@include mat.core();
+
+* {
+  font-family: "Inter", sans-serif !important;
+}
+
+.material-icons {
+  font-family: 'Material Icons' !important;
+}
+
+html,
+body {
+  margin: 0;
+  height: 100%;
+  width: 100%;
+  scrollbar-width: thin;
+  scrollbar-color: #6d7c77 #cfd7c7;
+}
+
+body {
+  height: 1000px;
+  background: #ffffff !important;
+  width: 32rem;
+}
